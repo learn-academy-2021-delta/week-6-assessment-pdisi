@@ -10,6 +10,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
   Your answer: Rails is by far the biggest challenge for me due to the lack of visuals, so I feel like I am taking a shot in the dark at this point in my learning process. I believe that a migration is necessary to add information to the database.
 
   Researched answer: A migration is actually the answer. By adding using a migration we add a table that is capable of connecting and holding other information. 
+ 
+ * Cohort has_many Students, Student belongs_to Cohort, Student has the foreign key because the foreign key is always  on the belongs to side. The name of the foreign column is cohort_id:integer, generate migration to fix the missing column
 
 
 
@@ -19,6 +21,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Researched answer: I have been trying to find additional information on this within the syllabus and online, but have not found anything that specifically states the why.
 
+* Edit, Update, Show, Destroy - have to know which item we are performing the action on
+
 
 
 3. Name three rails generator commands. What is created by each?
@@ -27,23 +31,25 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Researched answer: Rails models are a Ruby class, which is what I thought. However, they are capable of adding database records. Controllers connect the user, views, and the model. It is considered the logical center of the application and holds everything together. I believe that I was wrong with assets. They are used to combine assets from other gems.
 
+* Rails g model - model class, migration // rails g controller - controller, controller class, view folder // rails g rspec - testing folders // rails g migration - migration // rails g resource - model, controller, view folder, migration // rails g scaffold - controller, model, views folders, testing // 
+
 
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
-method="GET"    /students          This is index. Displays a list of students
+method="GET"    /students          This is index. Get all the data from the db
 
-method="POST"   /students          This is create. Creates a new "student"
+method="POST"   /students          This is create. Create - create a new student instance in db
 
-method="GET"    /students/new      This is new. Returns information on student
+method="GET"    /students/new      This is new. Form for creating a new student
 
-method="GET"    /students/2        This is show. Displays specific student information
+method="GET"    /students/2        This is show. Displays the student with id 2
 
-method="GET"    /students/2/edit   This is edit. Returns information for editing a student
+method="GET"    /students/2/edit   This is edit. Returns form for editing a specific student
 
-method="PATCH"  /students/2        This is update. Updates information on a student
+method="PATCH"  /students/2        This is update. Modifying the instance of the specific student
 
-method="DELETE" /students/2        This is destroy. Deletes a specific student
+method="DELETE" /students/2        This is destroy. Removes the instance of the student with the id 2
 
 Notes on process: I was not entirely sure about how to approach question 4, so I went with a simple approach.
 
